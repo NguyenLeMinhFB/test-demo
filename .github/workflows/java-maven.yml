@@ -31,7 +31,9 @@ jobs:
       
       # Build and run tests
       - name: Build and test
-        run: mvn -B package test
+        run: |
+          git fetch --all
+          mvn -B package test
 
   # Job 2: Check and merge changes to release branches
   check-and-merge:
@@ -46,7 +48,6 @@ jobs:
       # Check if optimize-builder has changes and merge to release-builder
       - name: Check changes in optimize-builder
         run: |
-          git fetch --all
           if git diff --name-only origin/release-builder HEAD -- optimize-builder/ | grep -q .; then
             echo "Changes detected in optimize-builder"
           else
@@ -56,7 +57,6 @@ jobs:
       # Check if optimize-handler has changes and merge to release-handler
       - name: Check changes in optimize-handler
         run: |
-          git fetch --all
           if git diff --name-only origin/release-handler HEAD -- optimize-handler/ | grep -q .; then
             echo "Changes detected in optimize-handler"
           else
