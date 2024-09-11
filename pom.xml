@@ -5,8 +5,13 @@
 	<groupId>com.demo.web</groupId>
 	<artifactId>web-thymeleaf</artifactId>
 	<version>1.0</version>
-    <name>Web demo show heatmap-popop</name>
-    <description>Web demo show heatmap-popop</description>
+	<packaging>pom</packaging>
+	<name>Web demo</name>
+    <description>Web demo</description>
+	<modules>
+		<module>optimize-builder</module>
+		<module>optimize-handler</module>
+	</modules>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -15,7 +20,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<properties>
-		<java.version>1.8</java.version>
+		<java.version>17</java.version>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<bootstrap.version>5.1.3</bootstrap.version>
 	</properties>
 	<dependencies>
