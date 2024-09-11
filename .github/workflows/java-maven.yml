@@ -46,9 +46,10 @@ jobs:
       # Check if optimize-builder has changes and merge to release-builder
       - name: Check changes in optimize-builder
         run: |
-          if git diff --name-only develop -- optimize-builder/ | grep -q .; then
+          if git diff --name-only origin/develop HEAD -- optimize-builder/ | grep -q .; then
+            echo "Changes detected in optimize-builder"
             git checkout release-builder
-            git merge develop --optimize-builder
+            git merge origin/develop
             git push origin release-builder
           else
             echo "No changes in optimize-builder"
@@ -57,9 +58,10 @@ jobs:
       # Check if optimize-handler has changes and merge to release-handler
       - name: Check changes in optimize-handler
         run: |
-          if git diff --name-only develop -- optimize-handler/ | grep -q .; then
+          if git diff --name-only origin/develop HEAD -- optimize-handler/ | grep -q .; then
+            echo "Changes detected in optimize-handler"
             git checkout release-handler
-            git merge develop --optimize-handler
+            git merge origin/develop
             git push origin release-handler
           else
             echo "No changes in optimize-handler"
