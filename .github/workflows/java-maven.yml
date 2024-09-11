@@ -46,17 +46,8 @@ jobs:
       # Check if optimize-builder has changes and merge to release-builder
       - name: Check changes in optimize-builder
         run: |
-          git config --global user.name "Minh Dev"
-          git config --global user.email "nguyenleminh@fabercompany.co.jp"
-          git fetch --all
-          git checkout release-builder
-          git reset --hard origin/release-builder
-          git checkout develop
           if git diff --name-only origin/release-builder HEAD -- optimize-builder/ | grep -q .; then
             echo "Changes detected in optimize-builder"
-            git checkout release-builder
-            git merge origin/develop --allow-unrelated-histories
-            git push origin release-builder
           else
             echo "No changes in optimize-builder"
           fi
@@ -64,17 +55,8 @@ jobs:
       # Check if optimize-handler has changes and merge to release-handler
       - name: Check changes in optimize-handler
         run: |
-          git config --global user.name "Minh Dev"
-          git config --global user.email "nguyenleminh@fabercompany.co.jp"
-          git fetch --all
-          git checkout release-handler
-          git reset --hard origin/release-handler
-          git checkout develop
           if git diff --name-only origin/release-handler HEAD -- optimize-handler/ | grep -q .; then
             echo "Changes detected in optimize-handler"
-            git checkout release-handler
-            git merge origin/develop --allow-unrelated-histories
-            git push origin release-handler
           else
             echo "No changes in optimize-handler"
           fi
