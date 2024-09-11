@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<!--  main-fragment (title, otherStaticResources, header, nav, mainContent, footer)  -->
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{layouts/main-layout :: main-fragment(  
+                                                ~{::title},
+                                                ~{:: #home-static-resources},
+                                                ~{:: #home-header},
+                                                ~{:: #home-nav},
+                                                ~{:: #home-main-content},  
+                                                ~{:: #home-footer}
+                                               )}">
+  <head>
+    <title>Title of Home Page</title>
+    <th:block id="home-static-resources">
+      <!-- <script type="text/javascript" src="../static/home.js" th:src="@{/home.js}"></script> -->
+      <link rel="stylesheet" type="text/css" />
+    </th:block>
+  </head>
+  <body>
+    <div id="home-header"> Header of Home Page </div>
+    <div id="home-nav" th:replace="~{/fragments/app-fragments :: nav-default}"> Home Nav </div>
+    <div id="home-main-content">
+      <h2>Home content</h2>
+      <div>Content of Home Page</div>
+      <div class="page-wrapper">
+        <section id="widget-ticker">
+          <ul id="hashtag-trending" class="clearfix">
+            <li class="hash-tag-item">
+              <a href="/tieu-diem/dich-sot-xuat-huyet-bung-phat.html?src=home_trending" title="Dịch sốt xuất huyết bùng phát"> Dịch sốt xuất huyết bùng phát </a>
+            </li>
+            <li class="hash-tag-item">
+              <a href="/tieu-diem/bao-gia.html?src=home_trending" title="Chi tiêu trong bão giá"> Chi tiêu trong bão giá </a>
+            </li>
+          </ul>
+          <div class="latest-news ">
+            <h2>
+              <a href="/" title="Tin tức 24h">Tin tức 24h</a>
+            </h2>
+            <ul></ul>
+          </div>
+        </section>
+        <section id="section-featured" class="section" data-count="8">
+          <div class="section-content">
+            <div data-content="newsfeatured" class="article-list">
+              <article class="article-item  type-text picked-featured" article-id="1332043" topic-id="2000,6150,6483" serie-id="" data-tracker="zingweb_home_sectionfeatured1">
+                <p class="article-thumbnail">
+                  <a href="/nhieu-cong-dan-laptop-ngoi-8-tieng-goi-mot-ly-nuoc-tai-quan-ca-phe-post1332043.html">
+                    <img src="https://znews-photo.zingcdn.me/w960/Uploaded/ngtntz/2022_02_18/thumb_quan_xa_1.jpeg" alt="Nhieu cong dan laptop ngoi 8 tieng, goi mot ly nuoc tai quan ca phe hinh anh">
+                  </a>
+                </p>
+                <header>
+                  <p class="article-title">
+                    <a href="/nhieu-cong-dan-laptop-ngoi-8-tieng-goi-mot-ly-nuoc-tai-quan-ca-phe-post1332043.html">Nhiều công dân laptop ngồi 8 tiếng, gọi một ly nước tại quán cà phê</a>
+                  </p>
+                  <p class="article-meta">
+                    <span class="article-publish">
+                      <span class="friendly-time">5 giờ trước</span>
+                      <span class="time">05:51</span>
+                      <span class="date">4/7/2022</span>
+                    </span>
+                    <a href="/doi-song.html" title="Đời sống">
+                      <span class="category-parent">Đời sống</span>
+                    </a>
+                    <a href="/doi-song.html" title="Đời sống">
+                      <span class="category">Đời sống</span>
+                    </a>
+                  </p>
+                  <p class="article-count">
+                    <span class="like-count"></span>
+                    <span class="dislike-count"></span>
+                    <span class="rating-count">0</span>
+                    <span class="viral-count ">201</span>
+                    <span class="comment-count ">34</span>
+                  </p>
+                  <p class="article-summary">Mỗi tháng, Lan Chi dành khoảng 8% thu nhập cho các quán cà phê. Nhiều lần, cô e ngại thái độ của nhân viên quán nên gọi 2 ly nước kèm bánh ngọt.</p>
+                  <ul class="article-related">
+                    <li class=" type-text">
+                      <a href="/dan-van-phong-o-tphcm-cu-ra-duong-gio-trua-la-ton-tien-post1331333.html" title="Dân văn phòng ở TP.HCM cứ ra đường giờ trưa là tốn tiền">Dân văn phòng ở TP.HCM cứ ra đường giờ trưa là tốn tiền</a>
+                    </li>
+                  </ul>
+                </header>
+                <img class="tracking unveil" alt="" src="//log.zingnews.vn/imps?type=article&amp;appid=zingweb&amp;id=1332043&amp;pos=zingweb_home_sectionfeatured1">
+              </article>
+              <article class="article-item  type-hasvideo picked-featured short" article-id="1332211" topic-id="2000,3949,4156" serie-id="" data-tracker="zingweb_home_sectionfeatured2">
+                <p class="article-thumbnail">
+                  <a href="/hlv-cua-quang-hai-o-pau-la-ai-post1332211.html">
+                    <img src="https://znews-photo.zingcdn.me/w480/Uploaded/sotntt/2022_07_03/didier_tholot_1.jpg" alt="HLV cua Quang Hai o Pau la ai? hinh anh">
+                  </a>
+                </p>
+                <header>
+                  <p class="article-title">
+                    <a href="/hlv-cua-quang-hai-o-pau-la-ai-post1332211.html">HLV của Quang Hải ở Pau là ai?</a>
+                  </p>
+                  <p class="article-meta">
+                    <span class="article-publish">
+                      <span class="friendly-time">2 giờ trước</span>
+                      <span class="time">09:07</span>
+                      <span class="date">4/7/2022</span>
+                    </span>
+                    <a href="/the-thao.html" title="Thể thao">
+                      <span class="category-parent">Thể thao</span>
+                    </a>
+                    <a href="/the-thao.html" title="Thể thao">
+                      <span class="category">Thể thao</span>
+                    </a>
+                  </p>
+                  <p class="article-count">
+                    <span class="like-count"></span>
+                    <span class="dislike-count"></span>
+                    <span class="rating-count">0</span>
+                    <span class="viral-count hide"></span>
+                    <span class="comment-count hide"></span>
+                  </p>
+                  <p class="article-summary">Từng là đồng đội với Zidane tại Ligue 1, sự nghiệp huấn luyện của Didier Tholot lại gắn liền với các hạng đấu thấp hơn ở Thụy Sĩ và Pháp.</p>
+                  <ul class="article-related">
+                    <li class=" type-video">
+                      <a href="/video-video-quang-hai-tra-loi-hop-bao-o-pau-fc-post1331417.html" title="Video Quang Hải trả lời họp báo ở Pau FC">Video Quang Hải trả lời họp báo ở Pau FC</a>
+                    </li>
+                  </ul>
+                </header>
+                <img class="tracking unveil" alt="" src="//log.zingnews.vn/imps?type=article&amp;appid=zingweb&amp;id=1332211&amp;pos=zingweb_home_sectionfeatured2">
+              </article>
+              <article class="article-item  type-text picked-featured" article-id="1331262" topic-id="2000,2208,4079,5663,5689,5801,6535" serie-id="" data-tracker="zingweb_home_sectionfeatured3">
+                <p class="article-thumbnail">
+                  <a href="/nghich-ly-chung-cu-vung-ven-ha-noi-dat-hon-khu-trung-tam-post1331262.html">
+                    <img src="https://znews-photo.zingcdn.me/w480/Uploaded/crnwwcc10/2022_06_30/bds_ha_noi_Viet_Linh_Thumb.jpg" alt="Nghich ly chung cu vung ven Ha Noi dat hon khu trung tam hinh anh">
+                  </a>
+                </p>
+                <header>
+                  <p class="article-title">
+                    <a href="/nghich-ly-chung-cu-vung-ven-ha-noi-dat-hon-khu-trung-tam-post1331262.html">Nghịch lý chung cư vùng ven Hà Nội đắt hơn khu trung tâm</a>
+                  </p>
+                  <p class="article-meta">
+                    <span class="article-publish">
+                      <span class="friendly-time">5 giờ trước</span>
+                      <span class="time">06:00</span>
+                      <span class="date">4/7/2022</span>
+                    </span>
+                    <a href="/kinh-doanh-tai-chinh.html" title="Kinh doanh">
+                      <span class="category-parent">Kinh doanh</span>
+                    </a>
+                    <a href="/kinh-doanh-tai-chinh.html" title="Kinh doanh">
+                      <span class="category">Kinh doanh</span>
+                    </a>
+                  </p>
+                  <p class="article-count">
+                    <span class="like-count"></span>
+                    <span class="dislike-count"></span>
+                    <span class="rating-count">0</span>
+                    <span class="viral-count hide"></span>
+                    <span class="comment-count hide"></span>
+                  </p>
+                  <p class="article-summary">Nhiều dự án chung cư tại các quận Hà Đông, Nam Từ Liêm, Long Biên… đang tăng giá nhanh. Một số dự án mới ra mắt và sắp bàn giao có giá ngang thậm chí cao hơn khu trung tâm.</p>
+                  <ul class="article-related">
+                    <li class=" type-hasvideo">
+                      <a href="/ha-noi-co-the-sua-sai-duoc-gi-o-tuyen-duong-nem-chat-40-chung-cu-post1329588.html" title="Hà Nội có thể sửa sai được gì ở tuyến đường nêm chặt 40 chung cư?">Hà Nội có thể sửa sai được gì ở tuyến đường nêm chặt 40 chung cư?</a>
+                    </li>
+                  </ul>
+                </header>
+                <img class="tracking unveil" alt="" src="//log.zingnews.vn/imps?type=article&amp;appid=zingweb&amp;id=1331262&amp;pos=zingweb_home_sectionfeatured3">
+              </article>
+            </div>
+            <div data-content="newstrending" class="article-list listing-layout">
+              <article class="article-item  type-text short" article-id="1332283" topic-id="4592" serie-id="" data-tracker="zingweb_home_sectionfeatured4">
+                <p class="article-thumbnail">
+                  <a href="/sinh-vien-han-quoc-khong-dam-tu-mua-bao-cao-su-post1332283.html">
+                    <img src="https://znews-photo.zingcdn.me/w210/Uploaded/mdf_uswreo/2022_07_03/5165_1.jpg" alt="Sinh vien Han Quoc khong dam tu mua bao cao su hinh anh">
+                  </a>
+                </p>
+                <header>
+                  <p class="article-title">
+                    <a href="/sinh-vien-han-quoc-khong-dam-tu-mua-bao-cao-su-post1332283.html">Sinh viên Hàn Quốc không dám tự mua bao cao su</a>
+                  </p>
+                  <p class="article-meta">
+                    <span class="article-publish">
+                      <span class="friendly-time">1 giờ trước</span>
+                      <span class="time">09:39</span>
+                      <span class="date">4/7/2022</span>
+                    </span>
+                    <a href="/doi-song.html" title="Đời sống">
+                      <span class="category-parent">Đời sống</span>
+                    </a>
+                    <a href="/doi-song.html" title="Đời sống">
+                      <span class="category">Đời sống</span>
+                    </a>
+                  </p>
+                  <p class="article-count">
+                    <span class="like-count"></span>
+                    <span class="dislike-count"></span>
+                    <span class="rating-count">0</span>
+                    <span class="viral-count hide"></span>
+                    <span class="comment-count hide"></span>
+                  </p>
+                  <p class="article-summary">Nhiều thanh thiếu niên đã biết về tình dục trước khi được giáo dục giới tính trong trường học. Thiếu kiến thức khiến người trẻ có những trải nghiệm tồi tệ, thiếu an toàn.</p>
+                </header>
+                <img class="tracking unveil" alt="" src="//log.zingnews.vn/imps?type=article&amp;appid=zingweb&amp;id=1332283&amp;pos=zingweb_home_sectionfeatured4">
+              </article>
+              <article class="article-item  type-qna" article-id="1332292" topic-id="4150,4907,6123" serie-id="" data-tracker="zingweb_home_sectionfeatured5">
+                <p class="article-thumbnail">
+                  <a href="/lam-chet-nan-nhan-khi-cuu-nguoi-lai-may-xuc-co-the-chiu-trach-nhiem-post1332292.html">
+                    <img src="https://znews-photo.zingcdn.me/w210/Uploaded/pgi_ubnatyvau/2022_07_04/291607803_2125322597639980_6837942841729457010_n.jpeg" alt="Lam chet nan nhan khi cuu nguoi, lai may xuc co the chiu trach nhiem hinh anh">
+                  </a>
+                </p>
+                <header>
+                  <p class="article-title">
+                    <a href="/lam-chet-nan-nhan-khi-cuu-nguoi-lai-may-xuc-co-the-chiu-trach-nhiem-post1332292.html">Làm chết nạn nhân khi cứu người, lái máy xúc có thể chịu trách nhiệm</a>
+                  </p>
+                  <p class="article-meta">
+                    <span class="article-publish">
+                      <span class="friendly-time">1 giờ trước</span>
+                      <span class="time">09:30</span>
+                      <span class="date">4/7/2022</span>
+                    </span>
+                    <a href="/phap-luat.html" title="Pháp luật">
+                      <span class="category-parent">Pháp luật</span>
+                    </a>
+                    <a href="/phap-luat.html" title="Pháp luật">
+                      <span class="category">Pháp luật</span>
+                    </a>
+                  </p>
+                  <p class="article-count">
+                    <span class="like-count"></span>
+                    <span class="dislike-count"></span>
+                    <span class="rating-count">0</span>
+                    <span class="viral-count hide"></span>
+                    <span class="comment-count hide"></span>
+                  </p>
+                  <p class="article-summary">Theo luật sư, người lái máy xúc đã có lỗi do cẩu thả hoặc quá tự tin, nên có thể bị xử lý hình sự về tội vô ý làm chết người.</p>
+                </header>
+                <img class="tracking unveil" alt="" src="//log.zingnews.vn/imps?type=article&amp;appid=zingweb&amp;id=1332292&amp;pos=zingweb_home_sectionfeatured5">
+              </article>
+              <article class="article-item  type-text short" article-id="1332352" topic-id="3723" serie-id="" data-tracker="zingweb_home_sectionfeatured6">
+                <p class="article-thumbnail">
+                  <a href="/le-au-ngan-anh-ket-hon-post1332352.html">
+                    <img src="https://znews-photo.zingcdn.me/w210/Uploaded/wpdhnwhnw/2022_07_04/avangananh.jpg" alt="Le Au Ngan Anh ket hon hinh anh">
+                  </a>
+                </p>
+                <header>
+                  <p class="article-title">
+                    <a href="/le-au-ngan-anh-ket-hon-post1332352.html">Lê Âu Ngân Anh kết hôn</a>
+                  </p>
+                  <p class="article-meta">
+                    <span class="article-publish">
+                      <span class="friendly-time">6 phút trước</span>
+                      <span class="time">10:38</span>
+                      <span class="date">4/7/2022</span>
+                    </span>
+                    <a href="/giai-tri.html" title="Giải trí">
+                      <span class="category-parent">Giải trí</span>
+                    </a>
+                    <a href="/giai-tri.html" title="Giải trí">
+                      <span class="category">Giải trí</span>
+                    </a>
+                  </p>
+                  <p class="article-count">
+                    <span class="like-count"></span>
+                    <span class="dislike-count"></span>
+                    <span class="rating-count">0</span>
+                    <span class="viral-count hide"></span>
+                    <span class="comment-count hide"></span>
+                  </p>
+                  <p class="article-summary">Hoa hậu Đại dương 2017 xác nhận cô sắp tổ chức hôn lễ. Hiện cô chưa chia sẻ nhiều về chồng sắp cưới.</p>
+                </header>
+                <img class="tracking unveil" alt="" src="//log.zingnews.vn/imps?type=article&amp;appid=zingweb&amp;id=1332352&amp;pos=zingweb_home_sectionfeatured6">
+              </article>
+              <article zone="107214494588433866" zone-ad-name="" class="article-item type-hasvideo" article-id="1331847" topic-id="3913,4034,4150,4151,5755" serie-id="" data-tracker="zingweb_home_sectionfeatured7">
+                <p class="article-thumbnail">
+                  <a href="/thuy-quai-khong-lo-song-amazon-duoc-san-don-con-mang-nguoi-thi-qua-re-post1331847.html">
+                    <img src="https://znews-photo.zingcdn.me/w210/Uploaded/ergz/2022_07_02/ezgif_1_4c611016a3.jpg" alt="Thuy quai khong lo song Amazon duoc san don, con mang nguoi thi qua re hinh anh">
+                  </a>
+                </p>
+                <header>
+                  <p class="article-title">
+                    <a href="/thuy-quai-khong-lo-song-amazon-duoc-san-don-con-mang-nguoi-thi-qua-re-post1331847.html">Thủy quái khổng lồ sông Amazon được săn đón, còn mạng người thì quá rẻ</a>
+                  </p>
+                  <p class="article-meta">
+                    <span class="article-publish">
+                      <span class="friendly-time">6 giờ trước</span>
+                      <span class="time">05:00</span>
+                      <span class="date">4/7/2022</span>
+                    </span>
+                    <a href="/the-gioi.html" title="Thế giới">
+                      <span class="category-parent">Thế giới</span>
+                    </a>
+                    <a href="/tu-lieu-the-gioi.html" title="Tư liệu">
+                      <span class="category">Tư liệu</span>
+                    </a>
+                  </p>
+                  <p class="article-count">
+                    <span class="like-count"></span>
+                    <span class="dislike-count"></span>
+                    <span class="rating-count">0</span>
+                    <span class="viral-count ">1</span>
+                    <span class="comment-count hide"></span>
+                  </p>
+                  <p class="article-summary">Ở vùng hẻo lánh của rừng Amazon, nơi nhà hoạt động Bruno Pereira và nhà báo Dom Phillips bị giết,&nbsp;các băng nhóm tội phạm hoành hành, đe dọa cuộc sống của thổ dân và hệ sinh thái.</p>
+                </header>
+                <img class="tracking unveil" alt="" src="//log.zingnews.vn/imps?type=article&amp;appid=zingweb&amp;id=1331847&amp;pos=zingweb_home_sectionfeatured7">
+              </article>
+              <article class="article-item  type-hasvideo" article-id="1332343" topic-id="3976" serie-id="" data-tracker="zingweb_home_sectionfeatured8">
+                <p class="article-thumbnail">
+                  <a href="/cau-thu-indonesia-duoc-yeu-cau-khong-pham-loi-voi-ronaldinho-post1332343.html">
+                    <img src="https://znews-photo.zingcdn.me/w210/Uploaded/wobjcak/2022_07_04/ronaldinho.jpg" alt="Cau thu Indonesia duoc yeu cau khong pham loi voi Ronaldinho hinh anh">
+                  </a>
+                </p>
+                <header>
+                  <p class="article-title">
+                    <a href="/cau-thu-indonesia-duoc-yeu-cau-khong-pham-loi-voi-ronaldinho-post1332343.html">Cầu thủ Indonesia được yêu cầu không phạm lỗi với Ronaldinho</a>
+                  </p>
+                  <p class="article-meta">
+                    <span class="article-publish">
+                      <span class="friendly-time">36 phút trước</span>
+                      <span class="time">10:08</span>
+                      <span class="date">4/7/2022</span>
+                    </span>
+                    <a href="/the-thao.html" title="Thể thao">
+                      <span class="category-parent">Thể thao</span>
+                    </a>
+                    <a href="/the-thao.html" title="Thể thao">
+                      <span class="category">Thể thao</span>
+                    </a>
+                  </p>
+                  <p class="article-count">
+                    <span class="like-count"></span>
+                    <span class="dislike-count"></span>
+                    <span class="rating-count">0</span>
+                    <span class="viral-count hide"></span>
+                    <span class="comment-count hide"></span>
+                  </p>
+                  <p class="article-summary">Ban tổ chức giải giao hữu "Trofeo Meet the Star" ở Indonesia yêu cầu các đội tham dự không gây ra chấn thương cho huyền thoại Ronaldinho.</p>
+                </header>
+                <img class="tracking unveil" alt="" src="//log.zingnews.vn/imps?type=article&amp;appid=zingweb&amp;id=1332343&amp;pos=zingweb_home_sectionfeatured8">
+              </article>
+            </div>
+          </div>
+        </section>
+        <!-- CAMPAIGN COUNTDOWN -->
+        <section id="section-multimedia" class="section" data-count="5">
+          <header class="section-title">
+            <h3>MULTIMEDIA</h3>
+            <ul>
+              <li>
+                <a href="/video">VIDEO</a>
+              </li>
+              <li>
+                <a href="/series/podcast.html">PODCAST</a>
+              </li>
+              <li>
+                <a href="/series/long-form.html">LONGFORM</a>
+              </li>
+              <li>
+                <a href="/series/zingstory.html">STORY</a>
+              </li>
+              <li>
+                <a href="/series/trac-nghiem-quizz.html">QUIZZ</a>
+              </li>
+            </ul>
+          </header>
+          <div class="section-content ">
+            <div class="article-list multimedia-layout">
+              <article class="article-item  type-picture type-hasvideo" article-id="1332313" topic-id="3909,4150,4151" serie-id="" data-tracker="zingweb_home_sectionmultimedia1">
+                <p class="article-thumbnail">
+                  <a href="/thu-do-dan-mach-rung-dong-vi-vu-xa-sung-chet-nguoi-post1332313.html">
+                    <img src="https://znews-photo.zingcdn.me/w660/Uploaded/ovhunah/2022_07_04/xa_sung_.jpg" alt="Thu do Dan Mach rung dong vi vu xa sung chet nguoi hinh anh" class="unveil">
+                  </a>
+                </p>
+                <header>
+                  <p class="article-title">
+                    <a href="/thu-do-dan-mach-rung-dong-vi-vu-xa-sung-chet-nguoi-post1332313.html">Thủ đô Đan Mạch rúng động vì vụ xả súng chết người</a>
+                  </p>
+                  <p class="article-meta">
+                    <span class="article-publish">
+                      <span class="friendly-time">3 giờ trước</span>
+                      <span class="time">07:34</span>
+                      <span class="date">4/7/2022</span>
+                    </span>
+                    <a href="/the-gioi.html" title="Thế giới">
+                      <span class="category-parent">Thế giới</span>
+                    </a>
+                    <a href="/the-gioi.html" title="Thế giới">
+                      <span class="category">Thế giới</span>
+                    </a>
+                  </p>
+                  <p class="article-count">
+                    <span class="like-count"></span>
+                    <span class="dislike-count"></span>
+                    <span class="rating-count">0</span>
+                    <span class="viral-count ">8</span>
+                    <span class="comment-count hide"></span>
+                  </p>
+                  <p class="article-summary">"Những gia đình vô tội chỉ đang đi mua sắm hoặc ăn uống. Đan Mạch đã hứng chịu cuộc tấn công tàn khốc", thủ tướng Đan Mạch nói về vụ xả súng tại trung tâm thương mại hôm 3/7.</p>
+                </header>
+                <img class="tracking unveil" alt="" src="//log.zingnews.vn/imps?type=article&amp;appid=zingweb&amp;id=1332313&amp;pos=zingweb_home_sectionmultimedia1">
+              </article>
+              <article class="article-item  type-picture type-hasvideo short" article-id="1332307" topic-id="3934,3938" serie-id="" data-tracker="zingweb_home_sectionmultimedia2">
+                <p class="article-thumbnail">
+                  <a href="/5-cau-thu-barca-bi-hlv-xavi-gach-ten-post1332307.html">
+                    <img src="https://znews-photo.zingcdn.me/w360/Uploaded/natmzz/2022_07_04/p.jpg" alt="5 cau thu Barca bi HLV Xavi gach ten hinh anh" class="unveil">
+                  </a>
+                </p>
+                <header>
+                  <p class="article-title">
+                    <a href="/5-cau-thu-barca-bi-hlv-xavi-gach-ten-post1332307.html">5 cầu thủ Barca bị HLV Xavi gạch tên</a>
+                  </p>
+                  <p class="article-meta">
+                    <span class="article-publish">
+                      <span class="friendly-time">4 giờ trước</span>
+                      <span class="time">06:37</span>
+                      <span class="date">4/7/2022</span>
+                    </span>
+                    <a href="/the-thao.html" title="Thể thao">
+                      <span class="category-parent">Thể thao</span>
+                    </a>
+                    <a href="/the-thao.html" title="Thể thao">
+                      <span class="category">Thể thao</span>
+                    </a>
+                  </p>
+                  <p class="article-count">
+                    <span class="like-count"></span>
+                    <span class="dislike-count"></span>
+                    <span class="rating-count">0</span>
+                    <span class="viral-count ">7</span>
+                    <span class="comment-count hide"></span>
+                  </p>
+                  <p class="article-summary">Chiến lược gia người Tây Ban Nha thanh lọc đội hình để chuẩn bị đón những tân binh chất lượng trong phiên chợ hè 2022.</p>
+                </header>
+                <img class="tracking unveil" alt="" src="//log.zingnews.vn/imps?type=article&amp;appid=zingweb&amp;id=1332307&amp;pos=zingweb_home_sectionmultimedia2">
+              </article>
+              <article class="article-item  type-picture short" article-id="1332297" topic-id="4446,4730" serie-id="" data-tracker="zingweb_home_sectionmultimedia3">
+                <p class="article-thumbnail">
+                  <a href="/chiec-ao-xuyen-thau-phu-kin-chu-post1332297.html">
+                    <img src="https://znews-photo.zingcdn.me/w360/Uploaded/ryksdreyxq/2022_07_04/4_1.jpg" alt="Chiec ao xuyen thau phu kin chu hinh anh" class="unveil">
+                  </a>
+                </p>
+                <header>
+                  <p class="article-title">
+                    <a href="/chiec-ao-xuyen-thau-phu-kin-chu-post1332297.html">Chiếc áo xuyên thấu phủ kín chữ</a>
+                  </p>
+                  <p class="article-meta">
+                    <span class="article-publish">
+                      <span class="friendly-time">3 giờ trước</span>
+                      <span class="time">07:21</span>
+                      <span class="date">4/7/2022</span>
+                    </span>
+                    <a href="/thoi-trang.html" title="Thời trang">
+                      <span class="category-parent">Thời trang</span>
+                    </a>
+                    <a href="/thoi-trang.html" title="Thời trang">
+                      <span class="category">Thời trang</span>
+                    </a>
+                  </p>
+                  <p class="article-count">
+                    <span class="like-count"></span>
+                    <span class="dislike-count"></span>
+                    <span class="rating-count">0</span>
+                    <span class="viral-count hide"></span>
+                    <span class="comment-count hide"></span>
+                  </p>
+                  <p class="article-summary">Thiết kế mỏng manh khiến nhiều người liên tưởng đến hình ảnh nhạy cảm và nhầm lẫn cơ thể được phủ kín hình xăm.</p>
+                </header>
+                <img class="tracking unveil" alt="" src="//log.zingnews.vn/imps?type=article&amp;appid=zingweb&amp;id=1332297&amp;pos=zingweb_home_sectionmultimedia3">
+              </article>
+              <article class="article-item  type-picture short" article-id="1331787" topic-id="2178,2180,3451,3491,4465,6163" serie-id="" data-tracker="zingweb_home_sectionmultimedia4">
+                <p class="article-thumbnail">
+                  <a href="/7-ky-quan-ky-thuat-co-xua-tren-khap-the-gioi-post1331787.html">
+                    <img src="https://znews-photo.zingcdn.me/w360/Uploaded/tmuitg/2022_07_01/7_Adel_Newman.jpg" alt="7 ky quan ky thuat co xua tren khap the gioi hinh anh" class="unveil">
+                  </a>
+                </p>
+                <header>
+                  <p class="article-title">
+                    <a href="/7-ky-quan-ky-thuat-co-xua-tren-khap-the-gioi-post1331787.html">7 kỳ quan kỹ thuật cổ xưa trên khắp thế giới</a>
+                  </p>
+                  <p class="article-meta">
+                    <span class="article-publish">
+                      <span class="friendly-time">2 giờ trước</span>
+                      <span class="time">08:24</span>
+                      <span class="date">4/7/2022</span>
+                    </span>
+                    <a href="/du-lich.html" title="Du lịch">
+                      <span class="category-parent">Du lịch</span>
+                    </a>
+                    <a href="/dia-diem-du-lich.html" title="Địa điểm du lịch">
+                      <span class="category">Địa điểm du lịch</span>
+                    </a>
+                  </p>
+                  <p class="article-count">
+                    <span class="like-count"></span>
+                    <span class="dislike-count"></span>
+                    <span class="rating-count">0</span>
+                    <span class="viral-count ">19</span>
+                    <span class="comment-count hide"></span>
+                  </p>
+                  <p class="article-summary">Có niên đại hàng nghìn năm tuổi, những công trình đồ sộ này là kỳ tích về kỹ thuật khi được xây dựng chỉ bằng dụng cụ thô sơ và lao động chân tay.</p>
+                </header>
+                <img class="tracking unveil" alt="" src="//log.zingnews.vn/imps?type=article&amp;appid=zingweb&amp;id=1331787&amp;pos=zingweb_home_sectionmultimedia4">
+              </article>
+              <article class="article-item  type-picture short" article-id="1332295" topic-id="2207,4046,4443,5638,5663,5689,5801" serie-id="" data-tracker="zingweb_home_sectionmultimedia5">
+                <p class="article-thumbnail">
+                  <a href="/ga-quoc-te-san-bay-tan-son-nhat-nhon-nhip-post1332295.html">
+                    <img src="https://znews-photo.zingcdn.me/w360/Uploaded/kbfoplb/2022_07_04/DSC_4781_2.jpg" alt="Ga quoc te san bay Tan Son Nhat nhon nhip hinh anh" class="unveil">
+                  </a>
+                </p>
+                <header>
+                  <p class="article-title">
+                    <a href="/ga-quoc-te-san-bay-tan-son-nhat-nhon-nhip-post1332295.html">Ga quốc tế sân bay Tân Sơn Nhất nhộn nhịp</a>
+                  </p>
+                  <p class="article-meta">
+                    <span class="article-publish">
+                      <span class="friendly-time">1 giờ trước</span>
+                      <span class="time">09:24</span>
+                      <span class="date">4/7/2022</span>
+                    </span>
+                    <a href="/kinh-doanh-tai-chinh.html" title="Kinh doanh">
+                      <span class="category-parent">Kinh doanh</span>
+                    </a>
+                    <a href="/kinh-doanh-tai-chinh.html" title="Kinh doanh">
+                      <span class="category">Kinh doanh</span>
+                    </a>
+                  </p>
+                  <p class="article-count">
+                    <span class="like-count"></span>
+                    <span class="dislike-count"></span>
+                    <span class="rating-count">0</span>
+                    <span class="viral-count hide"></span>
+                    <span class="comment-count hide"></span>
+                  </p>
+                  <p class="article-summary">Sau quãng thời gian dài chịu ảnh hưởng của dịch Covid-19, ga quốc tế sân bay Tân Sơn Nhất (TP.HCM) đã nhộn nhịp trở lại khi bắt đầu vào mùa du lịch.</p>
+                </header>
+                <img class="tracking unveil" alt="" src="//log.zingnews.vn/imps?type=article&amp;appid=zingweb&amp;id=1332295&amp;pos=zingweb_home_sectionmultimedia5">
+              </article>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div id="home-footer" th:replace="~{/fragments/app-fragments :: copyright}"> Footer </div>
+  </body>
+</html>

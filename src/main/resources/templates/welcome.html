@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Web demo show heatmap-popop</title>
+
+    <link rel="stylesheet" th:href="@{webjars/bootstrap/4.2.1/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{../main.css}"/>
+
+    <script type="text/javascript" async="" src="http://localhost:8802/embed?service=heatmap-popup&amp;tokenId=this_is_site_id_from_heat_map_script&amp;protocol=http:&amp;hostname=localhost&amp;pathname=%2F&amp;search=&amp;hash=&amp;dv=d"></script>
+</head>
+
+<body>
+
+<!-- <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="https://app.mieru-ca.com/faber-extract">https://app.mieru-ca.com/faber-extract/</a>
+</nav> -->
+
+<main role="main" class="container">
+
+    <div class="starter-template">
+        <h1>Web demo show heatmap-popop</h1>
+        <h2>
+            <span th:text="'Hello, ' + ${message}"></span>
+        </h2>
+        <h1>
+            <span><a th:href="@{/home}">Start Test</span>
+        </h1>
+    </div>
+
+</main>
+<!-- /.container -->
+
+<script type="text/javascript" th:src="@{webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>
+</body>
+</html>
