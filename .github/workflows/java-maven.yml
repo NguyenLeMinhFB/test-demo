@@ -44,21 +44,34 @@ jobs:
         uses: actions/checkout@v3
       
       # Check if optimize-builder has changes and merge to release-builder
-      - name: Check changes in optimize-builder
+      - name: Check for changes in optimize-builder
+        id: builder
         run: |
-          git fetch --all
-          if git diff --name-only origin/release HEAD -- optimize-builder/ | grep -q .; then
-            echo "Changes detected in optimize-builder"
+          if git diff --name-only HEAD^ HEAD | grep -q '^optimize-builder/'; then
+            echo "optimize-builder has changes"
+            echo "::set-output name=builder_changed::true"
           else
-            echo "No changes in optimize-builder"
+            echo "optimize-builder has no changes"
+            echo "::set-output name=builder_changed::false"
           fi
       
       # Check if optimize-handler has changes and merge to release-handler
-      - name: Check changes in optimize-handler
+      - name: Check for changes in optimize-handler
+        id: handler
         run: |
-          git fetch --all
-          if git diff --name-only origin/release HEAD -- optimize-handler/ | grep -q .; then
-            echo "Changes detected in optimize-handler"
+          if git diff --name-only HEAD^ HEAD | grep -q '^optimize-handler/'; then
+            echo "optimize-handler has changes"
+            echo "::set-output name=handler_changed::true"
           else
-            echo "No changes in optimize-handler"
+            echo "optimize-handler has no changes"
+            echo "::set-output name=handler_changed::false"
+          fi
+          
+      - name: Print changes
+        run: |
+          if [ "${{ steps.builder.outputs.builder_changed }}" == "true" ]; then
+            echo "Changes detected in optimize-builder"
+          fi
+          if [ "${{ steps.handler.outputs.handler_changed }}" == "true" ]; then
+            echo "Changes detected in optimize-handler"
           fi
